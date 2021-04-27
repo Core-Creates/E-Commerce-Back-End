@@ -1,6 +1,39 @@
-<h1>Homepage: E-Commerce</h3>
+<header>
+
+  <h1>Homepage: E-Commerce</h1>
+
+  {{#if !logged_in}}
+
+  <nav class="navbar">
+    
+    <button class="btn" id="logout"> 
+      <a href="./login.handlebars" style="font-size:12px; "> 
+      Login
+      </a> 
+    </button>
+  </nav>
+
+  {{else}}
+
+  <nav class="navbar">
+    <h1>Homepage: E-Commerce</h1>
+
+    <button>
+      <a href="./logout.handlebars" style="font-size:12px; "> Logout Here</a>
+    </button>
+
+  </nav>
+
+  {{/if}}
+</header>
+
 
 <section class="card">
-<a href="./login.handlebars"> Login Here</a>
-</section>
+  <p>Welcome to the E-Commerce website! </p>
+  <br>
 
+  <main>
+    {{{ body }}}
+  </main>
+
+</section>

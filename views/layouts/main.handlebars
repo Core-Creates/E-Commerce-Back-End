@@ -13,11 +13,24 @@
         <h1>
             User Registry
         </h1>
+
         {{#if logged_in}}
-        <nav>
+        <nav class="navbar">
             <button class="btn" id="logout">logout</button>
         </nav>
+
+        {{else}}
+        <nav class="navbar">
+            <h1>Homepage: E-Commerce</h1>
+
+            <button>
+                <a href="./login.handlebars" style="font-size:12px; "> Login Here</a>
+            </button>
+        </nav>
+
+
         {{/if}}
+        
     </header>
     <main class="container container-fluid mt-5">
         {{{ body }}}
